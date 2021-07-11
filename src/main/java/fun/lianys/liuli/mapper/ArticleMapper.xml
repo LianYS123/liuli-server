@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="fun.lianys.liuli.dao.ArticleDao">
+    <resultMap id="articleResultMap" type="fun.lianys.liuli.pojo.Article">
+        <id column="id" property="id"/>
+        <result column="time" property="time"/>
+        <result column="href" property="href"/>
+        <result column="img_src" property="imgSrc"/>
+        <result column="tags" property="tags"/>
+        <result column="content" property="content"/>
+        <result column="title" property="title"/>
+        <result column="rating_score" property="ratingScore"/>
+        <result column="rating_count" property="ratingCount"/>
+        <result column="uid" property="uid"/>
+    </resultMap>
+
+    <select id="getArticles" resultMap="articleResultMap">
+        select * from article
+    </select>
+
+    <select id="getArticleById" parameterType="long" resultType="fun.lianys.liuli.pojo.Article">
+        select * from article where id=#{id}
+    </select>
+
+</mapper>

@@ -1,0 +1,22 @@
+
+
+mybatis:
+  mapper-locations: classpath:**/*Mapper.xml
+  type-aliases-package: fun.lianys.liuli.pojo.*
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_lian
+    username: root
+    password: tb1766318380
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: localhost
+    port: 6379
+swagger:
+  enable: true
+  application-name: ${spring.application.name}
+  application-version: 1.0
+  application-description: liuli api
+  try-host: http://localhost:${server.port}
+server:
+  port: 8080
