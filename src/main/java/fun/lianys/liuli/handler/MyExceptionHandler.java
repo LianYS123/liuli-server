@@ -51,6 +51,13 @@ public class MyExceptionHandler {
         return ApiResponse.of(HttpStatus.BAD_REQUEST.value(), ex.getMessage(), errors);
     }
 
+    @ResponseStatus(HttpStatus.UNAUTHORIZED)
+    @ExceptionHandler(SecurityException.class)
+    @ResponseBody
+    public ApiResponse handleUnAuthorized(SecurityException ex) {
+        return ApiResponse.of(HttpStatus.UNAUTHORIZED.value(), ex.getMessage(), ex.getMessage());
+    }
+
     /**
      * 统一 json 异常处理
      *

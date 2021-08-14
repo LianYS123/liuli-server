@@ -6,6 +6,7 @@ import com.github.pagehelper.PageInfo;
 import fun.lianys.liuli.dao.ArticleDao;
 import fun.lianys.liuli.pojo.Article;
 import fun.lianys.liuli.services.ArticleService;
+import fun.lianys.liuli.vo.ArticleParams;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,12 +19,11 @@ public class ArticleServiceImpl implements ArticleService {
     private ArticleDao articleDao = null;
 
     @Override
-    public List<Article> getArticles(Integer page, Integer pageSize) {
-        Page p = PageHelper.startPage(page, pageSize);
-        List<Article> articles = articleDao.getArticles();
+    public PageInfo getArticles(ArticleParams params) {
+        Page p = PageHelper.startPage(params.getPage(), params.getPageSize());
+        List<Article> articles = articleDao.getArticles(params);
         PageInfo info = new PageInfo(p.getResult());
-        System.out.println(info);
-        return articles;
+        return info;
     }
 
     @Override
@@ -31,8 +31,4 @@ public class ArticleServiceImpl implements ArticleService {
         return articleDao.getArticleById(id);
     }
 
-    @Override
-    public String test(){
-        return "test";
-    }
 }

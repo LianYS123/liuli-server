@@ -19,6 +19,17 @@
 
     <select id="getArticles" resultMap="articleResultMap">
         select * from article
+        <where>
+            <if test="keyword != null and keyword != ''">
+                title like concat("%", #{keyword} "%")
+                or tags like concat("%", #{keyword} "%")
+                or content like concat("%", #{keyword} "%")
+                or entry_content like concat("%", #{keyword} "%")
+            </if>
+        </where>
+        <if test="order != null and orderType">
+            order by ${order} ${orderType}
+        </if>
     </select>
 
     <select id="getArticleById" parameterType="long" resultType="fun.lianys.liuli.pojo.Article">
