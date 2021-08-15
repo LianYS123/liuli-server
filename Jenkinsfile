@@ -13,7 +13,7 @@ pipeline {
         }
         stage("Run") {
             steps {
-                sh 'nohup java -jar target/liuli-0.0.1-SNAPSHOT.jar &'
+                sh './scripts/deliver.sh'
             }
         }
     }
