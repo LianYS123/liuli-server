@@ -18,7 +18,9 @@
     </resultMap>
 
     <select id="getArticles" resultMap="articleResultMap">
-        select * from article
+        select
+        `id`, `time`, `href`, `img_src`, `tags`, `content`, `title`, `rating_score`, `rating_count`, `uid`
+        from article
         <where>
             <if test="keyword != null and keyword != ''">
                 title like concat("%", #{keyword} "%")
@@ -33,7 +35,9 @@
     </select>
 
     <select id="getArticleById" parameterType="long" resultType="fun.lianys.liuli.pojo.Article">
-        select * from article where id=#{id}
+        select *
+        from article
+        where id = #{id}
     </select>
 
 </mapper>
