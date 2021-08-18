@@ -1,0 +1,32 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.2)
+
+2021-08-18 10:11:17.400  INFO 7261 --- [           main] fun.lianys.liuli.LiuliApplication        : Starting LiuliApplication v0.0.1-SNAPSHOT using Java 17 on lianyongshengdeMacBook-Air.local with PID 7261 (/Users/lianyongsheng/IdeaProjects/liuli/target/liuli-0.0.1-SNAPSHOT.jar started by lianyongsheng in /Users/lianyongsheng/IdeaProjects/liuli)
+2021-08-18 10:11:17.401  INFO 7261 --- [           main] fun.lianys.liuli.LiuliApplication        : No active profile set, falling back to default profiles: default
+2021-08-18 10:11:18.087  INFO 7261 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-08-18 10:11:18.089  INFO 7261 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-08-18 10:11:18.104  INFO 7261 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2021-08-18 10:11:18.405  INFO 7261 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@47289387' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-18 10:11:18.407  INFO 7261 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-18 10:11:18.551  INFO 7261 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2021-08-18 10:11:18.558  INFO 7261 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-18 10:11:18.558  INFO 7261 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-08-18 10:11:18.593  INFO 7261 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-18 10:11:18.593  INFO 7261 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1154 ms
+Logging initialized using 'class org.apache.ibatis.logging.stdout.StdOutImpl' adapter.
+Parsed mapper file: 'class path resource [fun/lianys/liuli/mapper/UserMapper.xml]'
+Parsed mapper file: 'class path resource [fun/lianys/liuli/mapper/ArticleMapper.xml]'
+2021-08-18 10:11:19.393  INFO 7261 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@665522c2, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b9f74d0, org.springframework.security.web.header.HeaderWriterFilter@4cb40e3b, org.springframework.web.filter.CorsFilter@41fe8e5f, fun.lianys.liuli.filters.JwtAuthenticationFilter@1ab6718, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7efe7b87, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ca8d498, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3062f9f4, org.springframework.security.web.session.SessionManagementFilter@3a543f31, org.springframework.security.web.access.ExceptionTranslationFilter@383864d5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@38792286]
+2021-08-18 10:11:19.565  INFO 7261 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2021-08-18 10:11:19.708  INFO 7261 --- [           main] fun.lianys.liuli.LiuliApplication        : Started LiuliApplication in 2.533 seconds (JVM running for 2.772)
+2021-08-18 10:12:47.498  INFO 7261 --- [nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-18 10:12:47.499  INFO 7261 --- [nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-18 10:12:47.506  INFO 7261 --- [nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+null
+null
