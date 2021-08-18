@@ -25,4 +25,4 @@ echo 'application (which Jenkins built using Maven) to the Jenkins UI.'
 echo "java -jar target/${NAME}-${VERSION}.jar"
 set -x
 export JENKINS_NODE_COOKIE=dontKillMe
-nohup java -jar target/${NAME}-${VERSION}.jar &
+nohup java -jar target/${NAME}-${VERSION}.jar > output.txt &
