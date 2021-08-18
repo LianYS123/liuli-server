@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
 
+
+pid=`ps -ef | grep liuli | grep -v grep | tr -s " "|cut -d" " -f2`
+if [ -n "$pid" ];then
+  kill -9 "$pid"
+  echo -e "stop complete"
+else
+  echo -e "liuli service is not running"
+fi
+
 echo 'The following Maven command installs your Maven-built Java application'
 echo 'into the local Maven repository, which will ultimately be stored in'
 echo 'Jenkins''s local Maven repository (and the "maven-repository" Docker data'
