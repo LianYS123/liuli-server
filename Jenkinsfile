@@ -11,6 +11,7 @@ pipeline {
         }
         stage("Run") {
             steps {
+                sh 'export BUILD_ID=dontKillMe'
                 sh 'chmod 776 ./scripts/deliver.sh'
                 sh './scripts/deliver.sh'
             }
